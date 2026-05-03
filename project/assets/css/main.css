@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'Futuristic';
+  src: url('../font/Conthrax-SemiBold.otf') format('opentype');
+}
+
+body{
+    background-color: black;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: rgba(255, 255, 255, 0.05); /* Very light transparent white */
+  backdrop-filter: blur(10px); /* Blurs the background image behind the bar */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  
+  padding: 15px 0;
+  width: 100%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link {
+  color: #00f2ff; /* Neon cyan color */
+  text-decoration: none;
+  font-family: 'Futuristic'; 
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px; 
+  flex: 1;
+  text-align: center;
+  transition: 0.3s;
+  text-shadow: 0 0 8px rgba(0, 242, 255, 0.6);
+}
+
+.nav-link:hover {
+  color: #fff;
+  text-shadow: 0 0 15px #00f2ff, 0 0 25px #00f2ff;
+  font-size: 20px;
+}
+
+
+.nav-avatar img {
+  /* 
+  border: 2px solid #00f2ff; #00f2ff original color */
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.5);
+  display: flex;
+  width: 200px;
+  height: 70px;
+  border-radius: 10%;
+  padding: 8px;
+  margin-left: 10%;
+  border-top-right-radius: 60%;
+  border-bottom-left-radius: 70%;
+}
+
+.download{
+    padding: 15px;
+    font-size: 14px;
+    color: black;
+    background-color: rgba(255, 255, 0, 0.736);
+    border-radius: 15px;
+    height: 70px;
+    font-weight: bold;
+    font-family: 'Futuristic' sans-serif;
+   
+}
+.dlbutton {
+  font-family: 'Futuristic' sans-serif;
+}
+
+.dlbutton :hover{
+    background-color: white;
+    font-weight: bold;
+}
