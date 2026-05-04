@@ -5,7 +5,7 @@
 
 body {
     background-color: black;
-    height: 200vh;
+    height: 250vh;
     overflow-x: hidden;
     max-width: 100%;
     /* Page transition styles */
@@ -36,7 +36,7 @@ body.fade-out {
   width: 100%;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
-
+/* HEADER */
 .nav-link {
   color: #00f2ff; /* Neon cyan color */
   text-decoration: none;
@@ -110,6 +110,8 @@ body.fade-out {
     font-weight: bold;
 }
 
+/* HERO SECTION */
+
 .parallax{
   position: relative;
   display: flex;
@@ -136,6 +138,8 @@ body.fade-out {
   transform: translateX(0)
 }
 
+/* ABOUT SECTION */
+
 .parallax2{
   position: relative;
   display: flex;
@@ -150,7 +154,7 @@ body.fade-out {
   position: absolute;
   letter-spacing: 3px;
   top: 10%;
-  left: 40%;
+  left: 43%;
   font-family: 'Futuristic';
   text-shadow: 4px 4px 6px black;
   border-bottom: 1px solid;
@@ -165,7 +169,7 @@ body.fade-out {
   letter-spacing: 2px;
   width: 900px;
   position: relative;
-  right: 10%;
+  right: 5%;
   text-shadow: 3px 3px 4px black;
   background: rgba(0,0,0,0.5);
   border: 1px solid rgba(0,255,255,0.2);
@@ -179,16 +183,18 @@ body.fade-out {
   height: 60px;
   position: absolute;
   top: 10%;
-  left: 37%;
+  left: 40%;
   filter: drop-shadow(3px 3px 4px rgb(0, 0, 0));
 }
+
+/* GAMEPLAY SECTION */
 
 .parallax3{
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 150vh;
   z-index: -1;
 
   background-color: #1a1035ad;
@@ -200,8 +206,8 @@ body.fade-out {
 #gameplay{
   position: absolute;
   letter-spacing: 3px;
-  top: 10%;
-  left: 40%;
+  top: 5%;
+  left: 43%;
   font-family: 'Futuristic';
   text-shadow: 4px 4px 6px black;
   border-bottom: 1px solid;
@@ -214,7 +220,41 @@ body.fade-out {
   width: 60px;
   height: 60px;
   position: absolute;
-  top: 10%;
-  left: 37%;
+  top: 5%;
+  left: 40%;
   filter: drop-shadow(3px 3px 4px rgb(0, 0, 0));
+}
+
+.gif1{
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.5);
+  display: flex;
+  padding: 8px 15px;
+  margin-left: 10%;
+  border: 2px solid #00f2ff;
+  position: absolute;
+  left: 0%;
+  top: 20%;
+}
+
+.gif2{
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.5);
+  display: flex;
+  padding: 8px 15px;
+  margin-left: 10%;
+  border: 2px solid #ffffff;
+  position: absolute;
+  right: 10%;
+  top: 20%;
+}
+
+.gif3{
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.5);
+  display: flex;
+  padding: 8px 15px;
+  margin-left: 10%;
+  border: 2px solid yellow;
+  position: relative;
+  top: 25%;
+  right: 5%;
+
 }

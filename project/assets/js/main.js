@@ -1,10 +1,11 @@
 let logo = document.getElementById('logo');
 let ship = document.getElementById('ship');
 
+//scroll effect
 window.addEventListener('scroll', () => {
     let value = window.scrollY;
 
-    if (logo) logo.style.marginTop = value * -2.5 + 'px';
+    if (logo) logo.style.marginTop = value * -1.5 + 'px';
     if (ship) ship.style.transform = `translateX(${value * 1.5}px)`;
 });
 
