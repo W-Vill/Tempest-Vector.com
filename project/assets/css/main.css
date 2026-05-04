@@ -3,16 +3,33 @@
   src: url('../font/Conthrax-SemiBold.otf') format('opentype');
 }
 
-body{
+body {
     background-color: black;
     height: 200vh;
+    overflow-x: hidden;
+    max-width: 100%;
+    /* Page transition styles */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
+
+body.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.fade-out {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: rgba(255, 255, 255, 0.05); /* Very light transparent white */
-  backdrop-filter: blur(10px); /* Blurs the background image behind the bar */
+  background: rgba(100, 100, 100, 0.177); /* Very light transparent white */
+  backdrop-filter: blur(50px); /* Blurs the background image behind the bar */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   
   padding: 15px 0;
@@ -31,28 +48,29 @@ body{
   text-align: center;
   transition: 0.3s;
   text-shadow: 0 0 8px rgba(0, 242, 255, 0.6);
+  position: relative;
 }
-.nav-link a span{
+
+.nav-link span {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: white;
   z-index: -1;
   transform: scale(0);
-  transition: 0;
+  transition: 1s;
 }
-.nav-link a :hover span{
+
+.nav-link:hover span {
   transform: scale(1);
 }
 
-.nav-link:hover {
+.nav-link:hover, .nav-link.active {
   color: #fff;
   text-shadow: 0 0 15px #00f2ff, 0 0 25px #00f2ff;
   font-size: 20px;
 }
-
 
 .nav-avatar img {
   /* 
@@ -67,6 +85,7 @@ body{
   border-top-right-radius: 60%;
   border-bottom-left-radius: 70%;
 }
+
 .avatar:hover{
   box-shadow: 0 0 15px rgb(0, 242, 255);
 }
@@ -80,13 +99,13 @@ body{
     height: 70px;
     font-weight: bold;
     font-family: 'Futuristic' sans-serif;
-   
 }
+
 .dlbutton {
   font-family: 'Futuristic' sans-serif;
 }
 
-.dlbutton :hover{
+.dlbutton:hover{
     background-color: white;
     font-weight: bold;
 }
@@ -97,17 +116,105 @@ body{
   justify-content: center;
   align-items: center;
   height: 90vh;
-  background: url('/assets/background-asset.png');
+  background: url('/assets/img/background-asset.png');
 }
+
 #logo{
   position: absolute;
   top: 20%;
   box-shadow: #fff;
+  filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.29));
+  pointer-events: none;
 }
+
 #ship{
   position: absolute;
   top: 55%;
-  left: 40%;
+  left: 30%;
   pointer-events: none;
+  filter: drop-shadow(5px 5px 10px rgba(225, 255, 0, 0.264));
+  transform: translateX(0)
+}
 
+.parallax2{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  z-index: -1;
+  background: radial-gradient(circle at center, #1a1035 0%, #05070f 100%);
+}
+
+#about{
+  position: absolute;
+  letter-spacing: 3px;
+  top: 10%;
+  left: 40%;
+  font-family: 'Futuristic';
+  text-shadow: 4px 4px 6px black;
+  border-bottom: 1px solid;
+  color: yellow;
+  text-shadow: 0 0 15px #ffffff, 0 0 25px #ffffff;
+}
+
+#description{
+  color: white;
+  font-family: 'Futuristic';
+  font-size: 14px;
+  letter-spacing: 2px;
+  width: 900px;
+  position: relative;
+  right: 10%;
+  text-shadow: 3px 3px 4px black;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid rgba(0,255,255,0.2);
+  padding: 15px;
+  border-radius: 15px;
+}
+
+#info-icon{
+  display: flex;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 10%;
+  left: 37%;
+  filter: drop-shadow(3px 3px 4px rgb(0, 0, 0));
+}
+
+.parallax3{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  z-index: -1;
+
+  background-color: #1a1035ad;
+  background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+#gameplay{
+  position: absolute;
+  letter-spacing: 3px;
+  top: 10%;
+  left: 40%;
+  font-family: 'Futuristic';
+  text-shadow: 4px 4px 6px black;
+  border-bottom: 1px solid;
+  color: yellow;
+  text-shadow: 0 0 15px #ffffff, 0 0 25px #ffffff;  
+}
+
+#game{
+  display: flex;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 10%;
+  left: 37%;
+  filter: drop-shadow(3px 3px 4px rgb(0, 0, 0));
 }
