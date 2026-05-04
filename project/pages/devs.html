@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tempest Vector | Screenshots</title>
     <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/component.css">
 </head>
 <body>
     <header>
@@ -25,11 +26,18 @@
     </nav>
     </header>
 
-    <!-- Placeholder content for screenshots page - add images as needed -->
-    <section style="min-height: 100vh; display: flex; justify-content: center; align-items: center; 
-    color: white; font-family: 'Futuristic'; font-size: 24px;">
+    
+    <section class="devs">
+        <img src="/assets/img/devs-icon1.png" alt="" class="devs-icon">
+        <h2 class="meetTheDevs">MEET THE DEVELOPERS</h2>
 
-    ----------------------------THE DEVS GOES HERE----------------------------
+        <div class="carousel-scene">
+            <div class="carousel-track" id="track"></div>
+            <div class="carousel-buttons">
+            <button class="btn btn-prev" onclick="move(-1)">PREV</button>
+            <button class="btn btn-next" onclick="move(1)">NEXT</button>
+        </div>
+
     </section>
     <script src="../assets/js/main.js"></script>
 </body>

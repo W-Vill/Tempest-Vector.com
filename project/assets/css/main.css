@@ -5,7 +5,7 @@
 
 body {
     background-color: black;
-    height: 250vh;
+    height: 100vh;
     overflow-x: hidden;
     max-width: 100%;
     /* Page transition styles */
@@ -158,8 +158,8 @@ body.fade-out {
   font-family: 'Futuristic';
   text-shadow: 4px 4px 6px black;
   border-bottom: 1px solid;
-  color: yellow;
-  text-shadow: 0 0 15px #ffffff, 0 0 25px #ffffff;
+  color: #00f2ffd4;
+  text-shadow: 0 0 15px #000000, 0 0 25px #000000;
 }
 
 #description{
@@ -211,8 +211,8 @@ body.fade-out {
   font-family: 'Futuristic';
   text-shadow: 4px 4px 6px black;
   border-bottom: 1px solid;
-  color: yellow;
-  text-shadow: 0 0 15px #ffffff, 0 0 25px #ffffff;  
+  color: #00f2ffd4;
+  text-shadow: 0 0 15px #000000, 0 0 25px #000000;  
 }
 
 #game{
@@ -257,4 +257,39 @@ body.fade-out {
   top: 25%;
   right: 5%;
 
+}
+
+/* DEVELOPERS SECTION */
+.devs{
+  background-color: #150E2B;
+  background: radial-gradient(circle at center, #1a1035 0%, #05070f 100%);
+  min-height: 100vh; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  color: white; 
+  font-family: 'Futuristic'; 
+  font-size: 24px;
+}
+
+.devs h2{
+  display: flex;
+  position: absolute;
+  letter-spacing: 3px;
+  top: 10%;
+  left: 50;
+  font-family: 'Futuristic';
+  text-shadow: 4px 4px 6px rgba(70, 70, 70, 0.33);
+  border-bottom: 1px solid;
+  color: #00f2ffd4;
+}
+
+.devs-icon{
+  display: flex;
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  top: 12%;
+  left: 35%;
+  filter: drop-shadow(3px 3px 4px black) ;
 }
