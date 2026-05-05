@@ -3,8 +3,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 50vh;
+    min-height: 100vh;
     font-family: sans-serif;
+    flex-direction: column;
 }
 .carousel-scene {
     display: flex;
@@ -14,22 +15,22 @@
   }
   .carousel-track {
     position: relative;
-    width: 700px;
-    height: 220px;
+    width: min(1100px, 90vw);
+    height: clamp(320px, 40vw, 500px);
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .card {
     position: absolute;
-    width: 20vw;
-    height: 50vh;
+    width: clamp(180px, 18vw, 300px);
+    height: clamp(280px, 32vw, 470px);
     border-radius: 14px;
     box-shadow: 0 0 15px 5px #00e5ff6c;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
+    font-size: clamp(14px, 1.2vw, 20px);
     font-weight: 500;
     color: #EAF2FF;
     text-shadow: 3px 3px 5px #000000;
@@ -40,7 +41,7 @@
     overflow: hidden;
   }
   .carousel-buttons {
-    position: absolute;
+    margin-top: 30px;
     top: 60%;
     transform: translateY(-50%);
     width: 50%;

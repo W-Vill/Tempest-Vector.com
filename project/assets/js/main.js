@@ -104,8 +104,10 @@ const purpleShades = [
   '#2d1541','#3d1e58','#4a2470','#5a2a82',
   '#4a2470','#3d1e58','#2d1541'
 ];
-
 const track = document.getElementById('track');
+
+if (track){
+
 const cards = [];
 
 for (let i = 0; i < total; i++) {
@@ -169,3 +171,4 @@ document.getElementById('btn-prev').addEventListener('click', () => move(-1));
 document.getElementById('btn-next').addEventListener('click', () => move(1));
 
 render();
+}
