@@ -27,26 +27,75 @@ document.querySelectorAll('a[href^="/pages/"], a[href^="/index.html"]').forEach(
     });
 });
 
+//KEY FEATURES FUNCTIONS
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.feature-card');
+    
+    // 1. Intersection Observer for Reveal Effect
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+    };
 
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active-scroll');
+                // Optional: stop observing if you only want it to animate once
+                // observer.unobserve(entry.target); 
+            }
+        });
+    }, observerOptions);
+
+    cards.forEach(card => observer.observe(card));
+
+    // 2. Advanced Parallax Effect
+    window.addEventListener('scroll', () => {
+        const viewportHeight = window.innerHeight;
+
+        cards.forEach((card) => {
+            const img = card.querySelector('.feature-media img');
+            if (!img) return;
+
+            // Get the bounding box of the card
+            const rect = card.getBoundingClientRect();
+            
+            // Check if card is visible in viewport
+            if (rect.top < viewportHeight && rect.bottom > 0) {
+                // Calculate how far the card is from the center of the screen
+                // 0 = centered, negative = above center, positive = below center
+                const centerOffset = rect.top + rect.height / 2 - viewportHeight / 2;
+                
+                const speed = 0.08; // Adjust for intensity
+                const translateY = centerOffset * speed;
+
+                img.style.transform = `translateY(${translateY}px)`;
+            }
+        });
+    });
+});
 
 // DEVS SECTION FUNCTIONS
 const total = 5;
 let current = 2;
 
-const positions = [
-  { x: -300, scale: 0.42, z: 0, opacity: 0.45 },
-  { x: -185, scale: 0.62, z: 1, opacity: 0.65 },
-  { x: -95,  scale: 0.78, z: 2, opacity: 0.80 },
-  { x: 0,    scale: 1.0,  z: 5, opacity: 1.00 },
-  { x: 95,   scale: 0.78, z: 2, opacity: 0.80 },
-  { x: 185,  scale: 0.62, z: 1, opacity: 0.65 },
-  { x: 300,  scale: 0.42, z: 0, opacity: 0.45 },
-];
+function getPositions() {
+  const cw = Math.min(window.innerWidth * 0.18, 260); // matches card width clamp
+  return [
+    { x: -cw * 2.0, scale: 0.42, z: 0, opacity: 0.45 },
+    { x: -cw * 1.8, scale: 0.62, z: 1, opacity: 0.65 },
+    { x: -cw * 0.9, scale: 0.78, z: 2, opacity: 0.80 },
+    { x: 0,         scale: 1.0,  z: 5, opacity: 1.00 },
+    { x: cw * 0.9,  scale: 0.78, z: 2, opacity: 0.80 },
+    { x: cw * 1.8,  scale: 0.62, z: 1, opacity: 0.65 },
+    { x: cw * 2.3,  scale: 0.42, z: 0, opacity: 0.45 },
+  ];
+}
 
 const people = [
-  { name: "Josh Arrieta",   role: "Game Designer",  lang: "Python, Java, JavaScript",   avatar: "" },
+  { name: "Adrian Marquez",   role: "UI/UX Dev",  lang: "Figma",   avatar: "" },
   { name: "Wency Jae Villegas",     role: "Game Developer",   lang: "Python, Java, JavaScript", avatar: "../assets/img/me.jpg" },
-  { name: "Adrian Marquez",   role: "UI/UX Dev",    lang: "Figma", avatar: "" },
+  { name: "Josh Arrieta",   role: "Game Dev/Front end",    lang: "Python, Java, JavaScript", avatar: "" },
   { name: "Aldred Naranjo",     role: "UI/UX Dev",        lang: "Figma",  avatar: "" },
   { name: "Flint Yabes",     role: "UI/UX Dev",     lang: "Figma",   avatar: "" },
 ];
@@ -72,6 +121,7 @@ for (let i = 0; i < total; i++) {
 }
 
 function render() {
+  const positions = getPositions();
   cards.forEach((card, i) => {
     const posIdx = (i - current) + 3;
     if (posIdx < 0 || posIdx >= positions.length) {
@@ -85,41 +135,37 @@ function render() {
     card.style.pointerEvents = 'auto';
     card.style.transform = `translateX(${p.x}px) scale(${p.scale})`;
     card.style.background = purpleShades[posIdx];
-    
-    const person = people[i];
-    const avatarHTML = person.avatar.startsWith('../')
-  ? `<div style="
-      width:100%; height: 100%;
-      border-radius: 50%;
-      background: url(${person.avatar}) center/cover;
-      margin: 0 auto 8px;
-    "></div>`
-  : `<div style="font-size: 36px; margin-bottom: 8px;">${person.avatar}</div>`;
 
+    const person = people[i];
+    const cardW = Math.min(window.innerWidth * 0.18, 260);
+    const imgSize = cardW * 0.85; // avatar scales with card
 
     card.innerHTML = `
-    <div style="text-align:center; padding: 12px;">
-    <div style="
-      width: 300px; height: 300px;
-      border-radius: 10%;
-      background: url(${person.avatar}) center/cover;
-      margin: 0 auto 8px;
-      box-shadow: 0 0 15px 5px #0000006c;
-    "></div>
-
-      <div style="text-align:center; padding: 12px;">
-        <div style="font-size: 40px; font-weight: 600;">${person.name}</div>
-        <div style="font-size: 20px; opacity: 0.8; margin-top: 4px;">${person.role}</div>
-        <div style="font-size: 20px; opacity: 0.6; margin-top: 2px;">${person.lang}</div>
+      <div style="text-align:center; padding: 12px; width: 100%;">
+        <div style="
+          width: ${imgSize}px; height: ${imgSize}px;
+          border-radius: 10%;
+          background: ${person.avatar ? `url(${person.avatar}) center/cover` : '#3d1e58'};
+          margin: 0 auto 8px;
+          box-shadow: 0 0 15px 5px #0000006c;
+        "></div>
+        <div style="font-size: clamp(12px, 1.4vw, 18px); font-weight: 600;">${person.name}</div>
+        <div style="font-size: clamp(10px, 1vw, 14px); opacity: 0.8; margin-top: 4px;">${person.role}</div>
+        <div style="font-size: clamp(10px, 1vw, 14px); opacity: 0.6; margin-top: 2px;">${person.lang}</div>
       </div>
     `;
-
   });
 }
+
+// Re-render on resize so positions stay correct
+window.addEventListener('resize', render);
 
 function move(dir) {
   current = Math.max(0, Math.min(total - 1, current + dir));
   render();
 }
+
+document.getElementById('btn-prev').addEventListener('click', () => move(-1));
+document.getElementById('btn-next').addEventListener('click', () => move(1));
 
 render();
