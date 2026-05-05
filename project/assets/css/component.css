@@ -60,7 +60,29 @@
     transition: opacity 0.15s, transform 0.1s;
   }
   .btn:active { transform: scale(0.97); }
-  .btn-prev { background: #00A8B5; color: #000000; font-weight: bold; border-radius: 5px;}
-  .btn-next { background: yellow; color: #000000; font-weight: bold; border-radius: 5px;}
+  .btn-prev {
+    background: #6c3bffa5;
+    color: white;
+    font-weight: bold; 
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    font-family: 'Futuristic';
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 0px #fff, 2px 2px 0px #888;
+  }
 
-  .btn:hover {background-color: white;}
+  .btn-next {background: #00E5FF;
+    color: #0A0A0A; 
+    font-weight: bold; 
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    font-family: 'Futuristic';
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 0px #fff, 2px 2px 0px #888;
+  }
+
+  .btn-prev:hover {background-color: #7C4DFF;}
+  .btn-next:hover{
+    background-color: #47e4f6;
+    box-shadow: 0 0 15px 5px rgba(0, 212, 255, 0.7);
+  }

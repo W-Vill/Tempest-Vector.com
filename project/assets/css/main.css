@@ -90,25 +90,24 @@ body.fade-out {
   box-shadow: 0 0 15px rgb(0, 242, 255);
 }
 
-.download{
-    padding: 15px;
-    font-size: 14px;
-    color: black;
-    background-color: rgba(255, 255, 0, 0.736);
-    border-radius: 15px;
-    height: 70px;
-    font-weight: bold;
-    font-family: 'Futuristic' sans-serif;
+.play-button{
+  padding: 20px;
+  background-color: #00FFA3;
+  color: #0A0A0A;
+  border-radius: 8px;
+  letter-spacing: 4px;
+  font-family: 'Futuristic';
+  font-weight: bold;
 }
 
-.dlbutton {
-  font-family: 'Futuristic' sans-serif;
+.play-button:hover{
+  box-shadow: 0 0 15px #37ff14;
 }
 
-.dlbutton:hover{
-    background-color: white;
-    font-weight: bold;
+.play-button:active{
+  transform: scale(0.97)
 }
+
 
 /* HERO SECTION */
 
@@ -283,16 +282,17 @@ body.fade-out {
   transform: scale(0.87);
 }
 .meet-button:hover{
-  background: #00f2ff92;
+  box-shadow: 0 0 15px 5px rgba(0, 213, 255, 0.327);
 }
 
 .meet-button{
   display: flex;
-  padding: 20px;
-  background-color: rgba(255, 255, 0, 0.843);
+  padding: 12px;
+  background-color: #00E5FF;
   font-weight: bold;
   border-radius: 8px;
   font-family: 'Futuristic';
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
 
