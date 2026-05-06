@@ -1,6 +1,5 @@
 let logo = document.getElementById('logo');
 let ship = document.getElementById('ship');
-
 //scroll effect
 window.addEventListener('scroll', () => {
     let value = window.scrollY;

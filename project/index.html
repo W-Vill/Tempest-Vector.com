@@ -8,24 +8,26 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="nav-avatar">
-                <a href="index.html"><img src="/assets/img/avatar.png" alt="User Avatar" class="avatar"></a>
-            </div>
+  <nav class="navbar">
+    <!-- Brand/Logo Area -->
+    <div class="nav-avatar">
+      <a href="index.html">
+        <img src="/assets/img/avatar.png" alt="User Avatar" class="avatar">
+      </a>
+    </div>
 
-            <a href="index.html" class="nav-link active">Home<span></span></a>
-            <a href="pages/screenshot.html" class="nav-link ">Screenshots<span></span></a>
-            <a href="/pages/gameplay.html" class="nav-link ">Gameplay<span></span></a>
-            <a href="/pages/features.html" class="nav-link ">Features<span></span></a>
-            <a href="/pages/devs.html" class="nav-link ">Meet the Devs<span></span></a>
-
-            
-    </nav>
-    </header>
+    <!-- Navigation Links Area -->
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="/pages/features.html" class="nav-link">Features</a>
+      <a href="/pages/devs.html" class="nav-link">Meet the Devs</a>
+    </div>
+  </nav>
+</header>
 
     <section class="parallax">
         <img src="/assets/img/avatar.png" alt="" id="logo">
-        <img src="/assets/img/ship-asset.png" alt="" id="ship">
+        <img src="/assets/img/ship-asset.gif" alt="" id="ship">
     </section>
     <script src="assets/js/main.js"></script>
 
@@ -38,29 +40,35 @@
     </section>
 
     <section class="parallax3">
+        <div class="carousel-wrapper">
+            <div class="aboutBox" style="position: relative; margin-bottom: 30px;">
+                <h2>-THREAT DATABASE-</h2>
+            </div>
+            
+            <div class="carousel-container">
+                <button id="ss-prev" class="nav-btn">❮</button>
+                <div id="ss-track"></div>
+                <button id="ss-next" class="nav-btn">❯</button>
+            </div>
 
-        <div class="gameplay">
-            <img src="/assets/img/game.png" alt="">
-            <h2 >GAMEPLAY IN ACTION</h2>
-        </div>    
-
-        <div class="gif-container">
-            <img src="/assets/img/normal_gameplay.gif" alt="" class="gif-item">
-            <img src="/assets/img/boss_fight.gif" alt="" class="gif-item">
-            <img src="/assets/img/upgrades.gif" alt="" class="gif-item">
+            <div id="ss-caption" class="carousel-caption">
+                <h3 id="ss-title"></h3>
+                <p id="ss-desc"></p>
+            </div>
         </div>
 
-
+        
         <div class="play-now">
             <a href=""><button type="button" class="play-button">PLAY NOW!</button></a>
         </div>
 
-        
         <div class="meetDevs">
             <a href="/pages/devs.html"><button type="button" class="meet-button">MEET THE DEVELOPERS</button></a>
         </div>
 
-        
     </section>
+
+    <script src="/assets/js/enemies.js"></script>
+
 </body>
 </html>
