@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // DEVS SECTION FUNCTIONS
-const total = 5;
+const total = 6;
 let current = 2;
 
 function getPositions() {
@@ -93,10 +93,11 @@ function getPositions() {
 
 const people = [
   { name: "Adrian Marquez",   role: "UI/UX Dev",  lang: "Figma",   avatar: "" },
-  { name: "Wency Jae Villegas",     role: "Game Developer",   lang: "Python, Java, JavaScript", avatar: "../assets/img/me.jpg" },
-  { name: "Josh Arrieta",   role: "Game Dev/Front end",    lang: "Python, Java, JavaScript", avatar: "" },
+  { name: "Wency Jae Villegas",     role: "Game Developer/Front End",   lang: "Python, Java, JavaScript", avatar: "../assets/img/pic-icon.png" },
+  { name: "Josh Arrieta",   role: "Game Dev/Front End",    lang: "Python, Java, JavaScript", avatar: "" },
   { name: "Aldred Naranjo",     role: "UI/UX Dev",        lang: "Figma",  avatar: "" },
   { name: "Flint Yabes",     role: "UI/UX Dev",     lang: "Figma",   avatar: "" },
+  { name: "Lenard Nato",     role: "UI/UX Dev",     lang: "Figma",   avatar: "" },
 ];
 
 const purpleShades = [
@@ -142,7 +143,7 @@ function render() {
     const imgSize = cardW * 0.85; // avatar scales with card
 
     card.innerHTML = `
-      <div style="text-align:center; padding: 12px; width: 100%;">
+      <div style="text-align:center; padding: 12px; width: 100%; font-family: 'Futuristic';">
         <div style="
           width: ${imgSize}px; height: ${imgSize}px;
           border-radius: 10%;

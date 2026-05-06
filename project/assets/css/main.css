@@ -96,17 +96,24 @@ body.fade-out {
 }
 
 .play-button{
+  position:fixed;
+  left: 50%;
+  margin-top: 50px;
+  max-width: 300px;
   padding: 20px;
-  background-color: #00FFA3;
-  color: #0A0A0A;
+  background-color: #00E5FF;
+  color: black;
   border-radius: 8px;
   letter-spacing: 4px;
   font-family: 'Futuristic';
   font-weight: bold;
+  padding: 25px;
+  text-shadow: 3px 3px 4px white;
+  box-shadow: 0 0 15px black ;
 }
 
 .play-button:hover{
-  box-shadow: 0 0 15px #37ff14;
+  box-shadow: 0 0 15px var(--accent-color);
 }
 
 .play-button:active{
@@ -135,7 +142,7 @@ body.fade-out {
 
 
 #ship{
-  margin-top: 250px;
+  margin-top: 400px;
   pointer-events: none;
   filter: drop-shadow(5px 5px 10px rgba(225, 255, 0, 0.264));
   transform: translateX(0);
