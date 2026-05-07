@@ -507,7 +507,8 @@ body.fade-out {
   display: flex;
   width: 55px;
   height: 55px;
-  filter: drop-shadow(3px 3px 4px black) ;
+  margin: 0 auto;
+  filter: drop-shadow(3px 3px 4px black);
 }
 
 /* FOOTER */
