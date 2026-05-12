@@ -134,55 +134,5 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof people !== 'undefined') {
         initCarousel('track', 'btn-prev', 'btn-next', people, false);
     }
-<<<<<<< HEAD
-=======
 });
 
-//KEY FEATURES FUNCTIONS
-document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.feature-card');
-    
-    // 1. Intersection Observer for Reveal Effect
-    const observerOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active-scroll');
-                // Optional: stop observing if you only want it to animate once
-                // observer.unobserve(entry.target); 
-            }
-        });
-    }, observerOptions);
-
-    cards.forEach(card => observer.observe(card));
-
-    // 2. Advanced Parallax Effect
-    window.addEventListener('scroll', () => {
-        const viewportHeight = window.innerHeight;
-
-        cards.forEach((card) => {
-            const img = card.querySelector('.feature-media img');
-            if (!img) return;
-
-            // Get the bounding box of the card
-            const rect = card.getBoundingClientRect();
-            
-            // Check if card is visible in viewport
-            if (rect.top < viewportHeight && rect.bottom > 0) {
-                // Calculate how far the card is from the center of the screen
-                // 0 = centered, negative = above center, positive = below center
-                const centerOffset = rect.top + rect.height / 2 - viewportHeight / 2;
-                
-                const speed = 0.08; // Adjust for intensity
-                const translateY = centerOffset * speed;
-
-                img.style.transform = `translateY(${translateY}px)`;
-            }
-        });
-    });
->>>>>>> c7c323e6a3250b53e502fb1c62a09ceb08416576
-});
