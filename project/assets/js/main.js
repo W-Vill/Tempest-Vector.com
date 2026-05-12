@@ -75,7 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // DEVS SECTION FUNCTIONS
+<<<<<<< HEAD
 const total = 5;
+=======
+const total = 6;
+>>>>>>> c7c323e6a3250b53e502fb1c62a09ceb08416576
 let current = 2;
 
 function getPositions() {
@@ -92,11 +96,20 @@ function getPositions() {
 }
 
 const people = [
+<<<<<<< HEAD
   { name: "Adrian Marquez",   role: "UI/UX Dev",  lang: "Figma",   avatar: "../assets/img/Marquez.png" },
   { name: "Wency Jae Villegas",     role: "Game Developer/Front End",   lang: "Python, Java, JavaScript", avatar: "../assets/img/Villegas.png" },
   { name: "Josh Arrieta",   role: "Game Dev/Front End",    lang: "Python, Java, JavaScript", avatar: "../assets/img/Arrieta.png" },
   { name: "Aldred Naranjo",     role: "UI/UX Dev",        lang: "Figma",  avatar: "../assets/img/Naranjo.png" },
   { name: "Flint Yabes",     role: "UI/UX Dev",     lang: "Figma",   avatar: "../assets/img/Yabes.png" },
+=======
+  { name: "Adrian Marquez",   role: "UI/UX Dev",  lang: "Figma",   avatar: "" },
+  { name: "Wency Jae Villegas",     role: "Game Developer/Front End",   lang: "Python, Java, JavaScript", avatar: "../assets/img/pic-icon.png" },
+  { name: "Josh Arrieta",   role: "Game Dev/Front End",    lang: "Python, Java, JavaScript", avatar: "" },
+  { name: "Aldred Naranjo",     role: "UI/UX Dev",        lang: "Figma",  avatar: "" },
+  { name: "Flint Yabes",     role: "UI/UX Dev",     lang: "Figma",   avatar: "" },
+  { name: "Lenard Nato",     role: "UI/UX Dev",     lang: "Figma",   avatar: "" },
+>>>>>>> c7c323e6a3250b53e502fb1c62a09ceb08416576
 ];
 
 const purpleShades = [
