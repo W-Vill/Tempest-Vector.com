@@ -26,6 +26,11 @@ body.fade-out {
     transform: translateY(-20px);
 }
 
+/*
+================ 
+NAVBAR 
+================
+*/
 .navbar {
   display: flex; 
   justify-content: space-between; /* Pushes logo to left, links to right */
@@ -119,7 +124,11 @@ body.fade-out {
   transform: scale(0.97)
 }
 
-/* HERO SECTION */
+/*
+================ 
+HERO SECTION 
+================
+*/
 .parallax{
   position: relative;
   display: flex;
@@ -145,7 +154,11 @@ body.fade-out {
   position: absolute;
 }
 
-/* ABOUT SECTION */
+/*
+================ 
+ABOUT SECTION 
+================
+*/
 .parallax2{
   position: relative;
   display: flex;
@@ -252,7 +265,11 @@ body.fade-out {
   filter: drop-shadow(3px 3px 4px rgb(0, 0, 0));
 }
 
-/* ENEMY SECTION */
+/*
+================ 
+ENEMY SECTION 
+================
+*/
 .parallax3{
   position: relative;
   display: flex;
@@ -355,37 +372,11 @@ body.fade-out {
 
 .nav-btn:hover { background: #00f2ff; color: black; }
 
-
-.meetDevs{
-  display: flex;
-  margin-top: 10px;
-}
-.meetDevs a{
-  text-decoration: none;
-  position: relative;
-  display: flex;
-}
-
-.meet-button:active{
-  transform: scale(0.87);
-}
-
-.meet-button:hover{
-  box-shadow: 0 0 15px 5px rgba(0, 213, 255, 0.327);
-}
-
-.meet-button{
-  display: flex;
-  padding: 12px;
-  background-color: #00E5FF;
-  font-weight: bold;
-  border-radius: 8px;
-  font-family: 'Futuristic';
-  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
-}
-
-
-/* KEY FEATURES */
+/*
+================ 
+KEY FEATURES TAB
+================
+*/
 :root {
     --accent-color: #00f2ff;
     --bg-dark: #0a0a0c;
@@ -482,7 +473,11 @@ body.fade-out {
     will-change: transform;
 }
 
-/* DEVELOPERS SECTION */
+/*
+================ 
+DEVELOPER TAB 
+================
+*/
 .devs{
   background-color: #150E2B;
   background: radial-gradient(circle at center, #1a1035 0%, #05070f 100%);
@@ -511,7 +506,11 @@ body.fade-out {
   filter: drop-shadow(3px 3px 4px black);
 }
 
-/* FOOTER */
+/*
+================ 
+FOOTER 
+================
+*/
 .game-footer {
     background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
